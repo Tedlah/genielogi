@@ -1,0 +1,222 @@
+<html>
+<head><titlte>LANGUAGE B</title></head>
+<body bgcolor="tan">
+<center><u><i><h1> LE LANGUAGE B</h1></i></u></center> 
+<img src="l.jpg" style="width:400px;height:400px;"> 
+
+ 
+     <p>      Le langage B est issu de la méthode B. <br>Ce langage a été défini initialement par Abrial. 
+<br>Il s’agit d’un langage formel qui permet d’exprimer des modèles conceptuels.<br></p> 
+<br><br><center><h2><i><u>1- PRINCIPE ET FONCTIONNEMENT </u></i></h2></center> 
+ <br><u><h3>a. Principe</h3></u> 
+            <br>Le principe du langage est la description des éléments consécutifs en mettant en exergue :<br> les prédicats, les expressions mathématiques (entiers, booléens, ensembles, relations ; fonctions),<br> 
+les substitutions qui constituent la dynamique du système modélise, les trois types de composants B (machine abstraites, raffinements et implantation). 
+ 
+<br><u><h3>b. Fonctionnement</h3></u> 
+            En ce qui concerne son fonctionnement, le langage b est une méthode formelle de développement logiciel qui permet 
+de modéliser de façon abstraite dans le langage de B le comportement d’un programme,<br>
+ puis par raffinements successifs, d’aboutir à un modelé concret, sous-ensemble du langage transcoder en Ada ou en C. 
+ 
+<br><center><h2><i><u>2- DEVELOPEMENT DE PROGRAMME AVEC B</u></i></h2></center> 
+ 
+         <br> Un module B développé est constitué de plusieurs composants B dont nous avons : 
+
+<br><u><h3>a- Une machine abstraite  </h3></u>
+            La machine abstraite (la spécification du module) d’éventuels raffinements (de cette spécification) et une implantation (raffinement final : code) <br>
+Une machine abstraite constitue la spécification d’un module logiciel, elle définit un modèle mathématique de ce sous-système : <br>
+description abstraite de son espace d’état et de ses états initiaux possibles description abstraite des opérations pour consulter ou modifier <br>
+l’état Ce modèle établit l’interface externe du module concerné : <br>
+propriétés respectées par toute implantation éventuelle cette garantie est assurée par les preuves au cours du développement formel Machines abstraites. 
+<br>
+MACHINE <br>
+NomMachine <br>
+SET <br>
+Nom d’ensemble<br> 
+CONSTANTS <br>
+Nom de constante<br> 
+PROPRETILES <br>
+Predicat <br>
+ABSTRACT_VARIABLES<br> 
+Nom de variable <br>
+INVARIANT <br>
+Predicat <br>
+INITIALISATION<br> 
+Substitution <br>
+OPERATION <br>
+Définition d’opération<br> 
+Aspect statique<br> 
+ 
+ 
+ 
+ 
+Aspect dynamique <br>
+END 
+              <br><p>Une machine abstraite contient la description de la spécification d’un module B. À ce titre, le langage B constitue donc un langage de spécification à part entière.<br> 
+<br>Seule la machine abstraite d’un module est accessible par les modules externes. <br>
+Par abus de langage, on emploie parfois le terme machine abstraite ou plus simplement machine à la place de module.<br>
+ En effet, d’une part le nom du module et de sa machine abstraite son confondu set d’autre part l’interface du module, 
+<br>c’est-à-dire la partie accessible de l’extérieur, est commune au module et à sa machine abstraite.<br>
+ Une machine abstraite comprend des liens, une partie statique et une partie dynamique.<br>
+ La partie statique est formée de données prenant la forme d’ensembles, de constantes, de variables ou de paramètres et par les propriétés de ces données.<br>
+ Une données d’un objet mathématique faisant partie de la boite à outil mathématique du langage B, <br>
+comme par exemple un scalaire, une semble, une fonction ou une suite. Les données sont encapsulées dans la machine abstraite.
+<br> La partie dynamique permet de manipule les données.<br>
+ Elle est constituée de l’initialisation qui permet de donner une valeur initiale aux variables et d’opérations qui correspondent à des services offerts par la machine pour manipuler les variables.<br>
+ On nomme invariant les propriétés des variables de la machine. <br>
+L’invariant doit être établi lors de l’initialisation de la machine et il doit être préservé lors de l’appel d’une opération de la machine.<br>
+ L’invariant constitue donc l’énoncé des propriétés de sécurité de la machine. 
+  
+  
+ 
+ 
+<br><u><h3>b-Le raffinement   </h3></u>
+    <br>       Le raffinement d’une machine abstraite est un composant qui conserve la même interface et le même comportement que la machine abstraite
+ mais qui reformule les données et les opérations de la machine à l’aide de données plus concrètes.<br>
+ Le raffinement permet également d’enrichir ce qui a été spécifié dans la machine abstraite.<br>
+ Lors du raffinement, les ensembles et les données concrètes d’une machine sont conservées.<br>
+ Les données raffinables sont raffinées, ce qui signifie qu’elles peuvent être conservées, disparaître ou changer de forme. <br>
+De nouvelles données peuvent être introduites.<br> Le corps des opérations doit également être raffiné : chaque opération raffinée doit réaliser
+ ce qui est spécifié dans l’abstraction, à l’aide des données du raffinement et de substitutions plus concrètes et plus déterministes. <br>
+Un premier raffinement peut à son tour être raffiné par un autre raffinement selon les principes indiqués cidessus.<br>
+ Plusieurs niveaux de raffinement peuvent ainsi être utiles sa fin de reformuler progressivement, par étapes successives, la machine abstraite.<br> 
+ 
+
+ REFINEMENT<br> 
+ Nom_machine_n <br>
+ REFINES Nom_machine<br> 
+ 
+ABSTRACT_VARIABLE<br> 
+ 
+Nom des variables<br> 
+ INVARIANT <br>
+ Prédicat <br>
+ INITIALISATION<br> 
+Raffinement d’initialisation<br> 
+ 
+OPERATIONS<br> 
+ 
+Raffinement d’opération <br>
+ END <br>
+	 
+Les données du composant 
+
+Nouvelle variable leur propriété + invariant de liaison 
+Il n’est pas possible d’introduire de nouvelle opération 
+  
+ 
+<br><u><h3>c- L’implémentation </h3></u>
+    <br>         Une implantation est un composant B qui constitue le niveau ultime de raffinement d’une machine abstraite. <br>
+Elle utilise largement un sous-ensemble du langage B, appelé B0, semblable à un langage de programmation informatique.<br> 
+Les données d’une implantation doivent être des données concrètes (scalaires, tableaux, chaînes de caractères) 
+ <br>implémentables directement dans un langage informatique évolué (Types et contraintes des données concrètes). <br>
+ Le corps des opérations d’une implantation doit être constitué par des substitutions concrètes, appelées instructions, 
+ <br>exécutables directement dans un langage informatique évolué (LaclauseLOCAL_OPERATIONS). <br> Ces propriétés font qu’il est possible de produire systématiquement un programme informatique à partir du B0 d’un projet B sémantiquement correct. Pour obtenir une meilleure intégration dans n’importe quel système informatique, le B0 est traduit automatiquement dans un langage informatique évolué comme Ada ou C ou C++. 
+
+ <br>IMPLEMENTATION 
+Nom_machine_n <br> 
+REFINES  <br>
+Nom_machine  <br>
+VALUES  <br>
+Valuation  <br>
+CONCRETE_VARIABLE  <br>
+Nom_de_variable  <br>
+INVARIANT  <br>
+Prédicat  <br>
+INITIALISATION  <br>
+Implémentation d’initialisation  <br>
+OPERATIONS  <br>
+	 
+  
+  
+ 
+Valuation des ensembles fixes et constants  <br>
+ 
+ 
+ Variable d’implémentation avec leur structure de donnée + invariant de liaison  <br>
+  
+ 
+ 
+  
+3- Les éléments de bases (Ensemble, formules, les relations et Fonctions) 
+ 
+Les ensembles 
+e1 et en 	Représentent des expressions quelconques (entiers, ensembles)  <br>
+Id 	Représente un identificateur  <br>
+n1 et n2   	Ce sont des expressions qui représentent des entiers  <br>
+{}    	Ensemble vide  <br>
+NAT 	Ensemble des entiers  <br>
+NAT1  
+{e1,...,en}  	Ensemble des entiers non nuls  <br>
+Ensemble des éléments e1,...,en (définition par extension) 
+{Id | Prédicats}  	Ensemble défini par compréhension  <br>
+(n1..n2)  	Ensemble des entiers compris entre n1 et n2  <br>
+E, E1 et E2 	Représentent des ensembles  <br>
+POW(E) 	Ensemble des parties de E  <br>
+POW1(E) 	Ensemble des parties non vides de E  <br>
+E1 * E2 	Produit cartésien  <br>
+E1 \/ E2 	Union des ensembles E1 et E2  <br>
+E1 /\ E2 	Intersection des ensembles E1 et E2  <br>
+E1 - E2 	Ensemble des éléments de E1 qui ne sont pas dans E2  <br>
+ 
+ 
+ 
+Les formules 
+Formule élémentaire ( e,e1 et e2  représentent des expressions quelconques (entiers, 
+ensembles,...)) 
+  <br>
+n1 et n2 	sont des expressions qui représentent des entiers  <br>
+E, E1 et E2 	représentent des ensembles.  <br>
+e:E  e/:E  
+E1 <: E2  	L'expression e est un objet de l'ensemble E (appartenance)  <br>
+L'expression e n'est pas un objet de l'ensemble E E1 est un sous-ensemble de E2 (inclusion)  <br>
+E1 /<: E2  	E1 n'est pas un sous-ensemble de E2.  <br>
+E1 <<: E2  E1 /<<: E2  	E1 est un sous-ensemble strict de E2 (inclusion stricte). E1 n'est pas un sous-ensemble strict de E2 
+Formule composée (F, F1 et F2 représentent des formules)  <br>
+not(F) 	Négation 
+F1 & F2  	Conjonction  <br>
+F1 or F2 	Disjonction  <br>
+F1 => F2 	Implication   <br>
+F1 <=> F2  
+ 	Equivalence  <br>
+# var. F 	Quantification existentielle  <br>
+! var. F 	Quantification universelle  <br>
+Les relations 
+	E, E1, E2 et E3 représentent des ensembles.  <br>
+R, R1 et R2 représentent des relations  <br>
+E1 <-> E2 		Ensemble des relations entre éléments de E1 et de E2 
+dom(R)   <br>
+ 		Le domaine de la relation R 
+ran(R) 		L'image de la relation R (codomaine ou range)  <br>
+R[E] 		L'image de l'ensemble E par la relation R  <br>
+R1 ; R2 		Composition des relations R1 et R2  <br>
+id(E) 		Relation identité sur l'ensemble E  <br>
+R~ 		Relation inverse de R  <br>
+ 
+Les fonctions   
+Les E, E1 et E2  représentent des ensembles.  <br>
+E1 +->> E2  	l'ensemble des fonctions partielles surjectives de E1 dans E2  <br>
+E1 -->> E2  	l'ensemble des fonctions totales surjectives de E1 dans E2  <br>
+E1 >+>> E2 	l'ensemble des fonctions totales bijectives de E1 dans E2  <br>
+E1 >->> E2 	l'ensemble des fonctions partielles bijectives de E1 dans E2  <br>
+ 
+  
+ 
+ 
+<br><u><h3>EXAMPLE </h3></u>
+ 
+Machine  <br>
+ 	Opération  	 	qq.rr?div(aa,bb)=   <br>
+/*qq et rr reptresente les quotient respective*/  <br>
+ aa NAT bb  NAT  <br>
+ 
+THEN  <br>
+ANY SS.tt where  <br>
+Ss  NAT? tt  NAT? aa=bb*ss+tt? tt<bb  <br>
+Then  <br>
+qq.rr :=ss.tt  <br>
+END  <br>
+         END  <br>
+END 
+  <br>
+ 
+  

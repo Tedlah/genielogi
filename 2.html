@@ -1,0 +1,69 @@
+<html>
+<head><title>methode b</title></head>
+<body bgcolor="plum">
+<img src="m.jpg" style="width:600px;height:400px;"> 
+<center><u><i><h1> LA METHODE B</h1></i></u></center> 
+ 
+
+ <br><center><h2><i><u>1- PRESENTATION ET HISTORIQUE </u></i></h2></center> 
+  
+<br><u><h3>a- Présentation </h3></u>
+ 
+                La méthode B est une méthode formelle qui permet le raisonnement sur des systèmes complexes ainsi que le développement logiciel.<br> 
+La méthode B permet de modéliser de façon abstraite le comportement et les spécifications d'un logiciel dans le langage de B, <br>
+puis par raffinements successifs d'aboutir à un modèle concret dans un sous-ensemble du langage B transcodable en Ada ou en C,<br>
+ exécutables par une machine concrète. Elle permet de formaliser le système et son environnement de manière abstraite, puis par raffinements successifs,<br>
+ de rajouter les détails au modèle du système.<br>
+ Une activité de preuve formelle permet de vérifier la cohérence du modèle abstrait et la conformité de chaque
+ raffinement avec le modèle supérieur (prouvant ainsi la conformité de l'ensemble des implémentations concrètes avec le modèle abstrait).<br>
+ On distingue : 
+*Le B classique tel qu'il est défini dans le B Book de 1996[2]. <br>L'outil logiciel de support est l'atelier B. 
+<br>*Le B événementiel qui est une évolution utilisant uniquement la notion d'événements pour décrire les actions et non plus les opérations 
+(qui sont proches des routines informatiques). Par conséquent, la méthode peut s'appliquer pour l'étude des systèmes de domaines variés, <br>
+plus seulement à des programmes. On réalise alors des développements incrémentaux de systèmes prouvés. <br>Pour cela on utilise toujours l'atelier B. 
+<br>*Le B# (B Sharp) qui est une reprise du B événementiel avec des éléments de la notation Z. <br>
+L'atelier logiciel change et s'appelle Rodin. br>
+ 
+<br><u><h3>b- Historique</h3></u> 
+               Le langage B a été conçu par Abrial, qui était un des principaux concepteurs de Z dans les années 1980, avec le concours de Laffitte, Mejia Il est fondé sur les travaux scientifiques de Christophe Belwer, Jones, Charle Morgan, (du Programming Research Group Université d'Oxford). B s'inscrit dans une longue filiation de recherches fondamentales : 
+<br>*1949 Alan M. Turing, Checking a large routine, Cambridge University 
+<br>*1967 Robert Floyd, Assigning meanings to programs, AMS 
+<br>*1969 C.A.R. Hoare, An axiomatic basis for computer programming, CACM  
+<br>*1972 D.L. Parnas, A Technique for Software Module Specification with Examples, CACM. 
+              La première conférence sur le B a eu lieu en France à Nantes les 25,26,27 novembre en 1996. La méthode B a été utilisé avec succès pour plusieurs applications industrielles. On peut citer le développement du logiciel embarqué pour la ligne 14 du métro parisien (METEOR) qui a été modélisé, prouvé et généré à partir de spécifications formelles B. En 2005, la RATP décide d'automatiser la ligne 1 et fait de nouveau appel à la méthode B pour le logiciel embarqué. Depuis 1995, de nombreux pilotes automatiques de métros ont été développés, notamment Barcelone, Delhi, Lausanne, Madrid, New York, Pékin (à l'occasion des Jeux Olympiques), Séoul ou encore Singapour. Le pilote automatique de canton de la navette de l'aéroport Charles de Gaulle fait partie des développements B. Enfin plusieurs métros en cours de développement ou de rénovation font appel à la méthode B pour le développement de logiciels embarqués : Istanbul, Le Caire, Milan, Sao Paulo, Shangai ou encore Toronto. En 1996, Abrial publie l'ouvrage The B-Book, Assigning programs to meanings. Il publie en 2010 un autre ouvrage sur le B événementiel : Modeling in Event-B, Hardback. 
+ <br><center><h2><i><u>2- OBJECTIFS ET CLASSIFICATION</u></i></h2></center> 
+<br><u><h3>a- Objectifs </h3></u>
+  
+              D'un point de vue purement théorique, l'objectif de la méthode B est de prouver qu'il n'y a pas d'écart entre la spécification et le code exécuté. Alors que les méthodes basées sur des tests permettent juste d'affirmer que les tests n'en ont pas trouvé ; et ce, quel que soit le niveau d'automatisation de la génération des scénarios de tests et les moyens mis en œuvre. Ainsi, le manque de temps et de moyen (forte contrainte dans l'industrie), conduira à un programme inutilisable (car non prouvé), là où les méthodes concurrentes conduisent à des programmes "bugués". De ce fait, l'utilisateur final ou le commanditaire peut avoir une grande confiance dans le programme. Cette confiance est en particulier essentielle, voire obligatoire, dans le secteur des transports, notamment en aéronautique avec la norme DO-178B ou en ferroviaire car la sécurité des usagers est primordiale. B couvre la spécification, la conception par raffinements successifs, l'architecture en couches et la traduction en code source, cela permet la mise en œuvre d'optimisations de "haut niveau" ; par exemple : 
+<br>*D’écrire les propriétés des éléments à sélectionner dans un ensemble de manière compréhensible du client final, 
+<br>*D’implémenter cette recherche de manière efficace d'un point de vue temps d'exécution. 
+<br>*De prouver ensuite que la spécification est respectée quelle que soit la branche du code parcourue (y compris dans les cas atypiques mais qui finiront par arriver) B ne couvre pas la génération du programme exécutable finale (exemple .exe) et donc l'optimisation bas niveau, laissant cela aux compilateurs spécialisés. 
+ 
+ <br><u><h3>b- Classifications</h3></u>
+ 
+          Il existe de nombreuses approches plus ou moins parcellaires avec de nombreuses variantes pour la classification des méthodes formelles. Néanmoins, Il est difficile de classer une approche, On peut classer les méthodes formelles en quatre catégories : 
+<br>*Approche algébrique : Types abstraits de données (aucune structure de donnée n'est décrite, seules les opérations le sont), déduction équationnelle. 
+<br>*Approche dynamique : Modélisation de l'interaction entre différents processus.  
+<br>*Approche logique : Théorie des types et logiques d'ordre supérieur.  
+<br>*Approche par modèle abstrait : Définition d'une structure de données et d'un ensemble d'opérations, approche constructive : B.4   Critères de classification possibles : 
+<br>*Type de raisonnement modèle algorithmique théorie des types, n    algèbres de processus files d'attentes modèle mathématique : B5    
+<br>*Aspect du système : dynamique fonctionnel statique : B ? Langage Dédié général : B 
+ <br><center><h2><i><u>3- OUTILS ET DOMAINES D’APPLICATION       </u></i></h2></center>                
+
+ <br><u><h3> a. outils </h3></u>  
+  La méthode B possède plusieurs outils parmi lesquels : 
+ 
+<br>*Atelier b : outils industriel permettant l’utilisation opérationnelle de la méthode B pour des développements logiciels prouvés ; 
+<br>*B4Free : outil académique permettant l’utilisation opérationnelle de la méthode B pour des développements logiciels prouvés ; <br>*Composys : outil de conception formelle d’architecture système ; <br>*Brama : outils de conception formelle d’architecture système. 
+ 
+                      
+ <br><u><h3> b. domaines d’application </h3></u>  
+ La méthode se penche sur plusieurs domaines : 
+<br>*Des industriels : ils cherchent des systèmes sécuritaires faisant appels aux méthodes formelles, ainsi que de nouvelle technologies pouvant répondre à l’heure besoin ; 
+<br>*Des experts et spécialistes : individus cherchant des informations sur des méthodes formelles a niveau hautement technique ; 
+<br>*Des chercheurs spécialistes en Ret D : ils agissent pour un développement durable des méthodes formelles afin de 
+développer de nouvelles solution pour le futur ; 
+<br>*Des enseignant universitaires et chercheurs : ils enseignent B dans le milieu académique et étudient les évolutions possibles des méthodes formelles. 
+ 
+ 
+ 
